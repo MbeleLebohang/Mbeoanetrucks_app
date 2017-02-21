@@ -37,12 +37,74 @@ body{
 	margin: 0 auto;
 	background: image_url('bg.jpg'); 
 }
-.section-title hr{
-	border-color: $color_secondary;
-	width: 120px;
+.section-title{
+	hr{
+		border-color: $color_secondary;
+		width: 120px;
+	}
 }
 
-.section-title h2{ font-weight: 700;}
+.section-heading-spacer{
+	hr{
+	    float: center;
+	    width: 200px;
+	    border-top: 3px solid $color_secondary;
+    }
+}
+.profile-thumbnail {
+  text-align: center;
+  margin-top: 46px;
+
+  img {
+    margin: 0 auto;
+  }
+
+  h4 {
+    margin-top: 24px;
+    font-size: 20px;
+    color: #2f2f2f;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+  }
+  h5 {
+    margin-top: -3px;
+    font-size: 13px;
+    color: #a9a9a9;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+  }
+  p {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  ul {
+    margin-top: 2px;
+    padding-left: 0px;
+    display: inline-block;
+    margin: 0 auto;
+
+    li {
+      padding: 0 10px;
+      float: left;
+      list-style: none;
+      font-family: FontAwesome;
+      font-size: 15px;
+
+      a {
+        color: #2f2f2f;
+      }
+
+      a:hover {
+        color: #1fcdff;
+      }
+    }
+  }
+}
 
 button.btn,
 a.btn {
@@ -95,6 +157,10 @@ a.btn.btn-primary.my-btn2:hover{
 /*========================================================================
   Typography
 =========================================================================*/
+h1, h2, h3, h4, h5, h6{
+	font-weight: 300;
+}
+
 h1{
 	text-transform: uppercase;
 }
@@ -140,7 +206,15 @@ a:focus{
   Header
 =========================================================================*/
 #tf-home{
-	background: image_url('header-bg.jpg');
+	background: image_url('bg-1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #cfcfcf;
+}
+.tf-general{
+	background: image_url('bg-2.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -148,7 +222,7 @@ a:focus{
 	color: #cfcfcf;
 }
 
-#tf-home .overlay{
+#tf-home .overlay, .tf-general .overlay{
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */

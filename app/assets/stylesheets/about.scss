@@ -1,0 +1,41 @@
+ /*-----------------------------------------------------------------------------------------------------------------
+
+@package: Mbeone Trucks
+@author: Mbele Lebohang
+@version: 1.0
+
+-------------------------------------------------------------------------------------------------------------------*/
+
+/*========================================================================
+  Imports & Variables
+==========================================================================*/
+/* Imports */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'slick';
+@import 'slick-theme';
+@import url(http://fonts.googleapis.com/css?family=Playball);
+
+
+/* mixins, variables, etc. */
+$color_main : #13bfec ; // main purple
+$color_secondary : darken($color_main, 10%) ; // dark purple
+$gray-medium-light: #eaeaea;
+
+$font_main : 'Roboto', sans-serif;
+$font_titles : 'Dosis', sans-serif;
+
+/*========================================================================
+  Mbeone Story
+==========================================================================*/
+.about-us{
+	text-align: center;
+}
+.our-team{
+	background-color: $color_secondary;
+	padding: 5px 0 20px 0;
+
+	.fa{
+		color: white;
+	}
+}
