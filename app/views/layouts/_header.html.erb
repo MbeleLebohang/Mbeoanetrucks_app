@@ -1,0 +1,51 @@
+<nav class="navbar navbar-main">
+
+  <div class="navbar-header">
+    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href = "<%= root_url %>"><img class="navbar-brand" src="<%= image_url('logo.png') %>" alt="logo">
+    </a>
+  </div>
+  <div class="collapse navbar-collapse" id="collapsemenu">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "About", about_url ,'aria-haspoup' => 'true' %>
+        </li>
+
+        <li class="has-child">
+           <%= link_to "Programs", root_url ,'aria-haspoup' => 'true' %>
+          <ul class="submenu">
+            <li class="submenu-item">
+              <%= link_to "Tutoring", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+
+            <li class="submenu-item">
+              <%= link_to "Mentoring", root _url ,'aria-haspoup' => 'true' %>
+            </li>
+            <li class="submenu-item">
+              <%= link_to "Career Guidance", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+            <li class="submenu-item">
+              <%= link_to "Projects", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <%= link_to "Mentors", root_url ,'aria-haspoup' => 'true' %>
+        </li>
+        <li>
+          <%= link_to "FAQ", root_url ,'aria-haspoup' => 'true' %>
+        </li>
+        <li class="active-button">
+          <%= link_to "Sign in", root_url ,'aria-haspoup' => 'true' %>
+        </li>     
+      </ul>
+    </div>
+  </div>
+</nav>
