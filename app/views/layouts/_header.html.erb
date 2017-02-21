@@ -1,51 +1,27 @@
-<nav class="navbar navbar-main">
-
-  <div class="navbar-header">
-    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href = "<%= root_url %>"><img class="navbar-brand" src="<%= image_url('logo.png') %>" alt="logo">
-    </a>
-  </div>
-  <div class="collapse navbar-collapse" id="collapsemenu">
+<div id="sticky-anchor"></div>
+<nav id="tf-menu" class="navbar navbar-default">
     <div class="container">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to "About", about_url ,'aria-haspoup' => 'true' %>
-        </li>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="#">Mbeone Trucks</a>
+        </div>
 
-        <li class="has-child">
-           <%= link_to "Programs", root_url ,'aria-haspoup' => 'true' %>
-          <ul class="submenu">
-            <li class="submenu-item">
-              <%= link_to "Tutoring", root_url ,'aria-haspoup' => 'true' %>
-            </li>
-
-            <li class="submenu-item">
-              <%= link_to "Mentoring", root_url ,'aria-haspoup' => 'true' %>
-            </li>
-            <li class="submenu-item">
-              <%= link_to "Career Guidance", root_url ,'aria-haspoup' => 'true' %>
-            </li>
-            <li class="submenu-item">
-              <%= link_to "Projects", root_url ,'aria-haspoup' => 'true' %>
-            </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="active"><a href="#">Sign in</a></li>
           </ul>
-        </li>
-
-        <li>
-          <%= link_to "Mentors", root_url ,'aria-haspoup' => 'true' %>
-        </li>
-        <li>
-          <%= link_to "FAQ", root_url ,'aria-haspoup' => 'true' %>
-        </li>
-        <li class="active-button">
-          <%= link_to "Sign in", root_url ,'aria-haspoup' => 'true' %>
-        </li>     
-      </ul>
-    </div>
-  </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
+        

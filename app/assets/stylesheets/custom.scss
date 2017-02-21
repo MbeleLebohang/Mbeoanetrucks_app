@@ -1,0 +1,251 @@
+ /*-----------------------------------------------------------------------------------------------------------------
+
+@package: Mbeone Trucks
+@author: Mbele Lebohang
+@version: 1.0
+
+-------------------------------------------------------------------------------------------------------------------*/
+
+/*========================================================================
+  Imports & Variables
+==========================================================================*/
+/* Imports */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'slick';
+@import 'slick-theme';
+@import url(http://fonts.googleapis.com/css?family=Playball);
+
+
+/* mixins, variables, etc. */
+$color_main : #13bfec ; // main purple
+$color_secondary : darken($color_main, 10%) ; // dark purple
+$gray-medium-light: #eaeaea;
+
+$font_main : 'Roboto', sans-serif;
+$font_titles : 'Dosis', sans-serif;
+
+/*========================================================================
+  Universal
+==========================================================================*/
+body{
+	font-family: $font_main;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	background: image_url('bg.jpg'); 
+}
+.section-title hr{
+	border-color: $color_secondary;
+	width: 120px;
+}
+
+.section-title h2{ font-weight: 700;}
+
+button.btn,
+a.btn {
+	margin: 15px 5px;
+	transition: all 0.5s;
+}
+button.btn.btn-primary.my-btn,
+a.btn.btn-primary.my-btn {
+	background: $color_secondary;
+	border-color: transparent;
+	border-radius: 0px;
+	border-width: 2px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+button.btn.btn-primary.my-btn:hover,
+a.btn.btn-primary.my-btn:hover{
+	background: #FFFFFF;
+	color: $color_main;
+	border-color: transparent;
+}
+button.btn.btn-primary.my-btn.dark:hover,
+a.btn.btn-primary.my-btn.dark:hover{
+	background: #222222;
+	color: #ffffff;
+	border-color: transparent;
+}
+a.btn.btn-primary.my-btn2 {
+	background: rgba(47, 147, 123, 0);
+	border-color: #FFFFFF;
+	border-radius: 0px;
+	border-width: 2px;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+a.btn.btn-primary.my-btn2:hover{
+	background: $color_secondary;
+	color: #ffffff;
+	border-color: transparent;
+}
+
+/*========================================================================
+  Typography
+=========================================================================*/
+h1{
+	text-transform: uppercase;
+}
+
+h2{
+	line-height: 20px;
+	margin:  0;
+}
+
+h4 {
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	color: $color_main;
+}
+p{
+	font-size: 13px;
+}
+
+a { 
+	color: #ffffff;
+	transition: all 0.8;
+}
+a:hover,
+a:focus{
+	color: $color_secondary;
+	text-decoration: none;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+/*========================================================================
+  Header
+=========================================================================*/
+#tf-home{
+	background: image_url('header-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #cfcfcf;
+}
+
+#tf-home .overlay{
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.73) 17%, rgba(0,0,0,0.66) 35%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(17%,rgba(0,0,0,0.73)), color-stop(35%,rgba(0,0,0,0.66)), color-stop(62%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.4))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+	height: auto;
+	background-attachment: fixed;
+}
+
+.content{
+	padding: 15% 0 18% 0;
+	text-align: center;
+}
+/*========================================================================
+  Navigation bar
+=========================================================================*/
+#tf-menu {
+	margin-bottom: 0;
+	background: darken($color_secondary, 30%);
+	border: 0;
+	border-bottom: 2px solid $color_secondary;
+	border-radius: 0;
+	color: #fff !important;
+	padding: 0.3% 0;
+	transition: all 0.5s;
+}
+#sticky {
+    padding: 0.5ex;
+    background-color: #333;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 0.5ex;
+}
+#tf-menu.stick {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background: #222222;
+    padding: 1% 0;
+}
+#tf-menu.navbar-default .navbar-nav > li > a {
+	color: #C5C5C5;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 10px;
+	border: 2px solid transparent;
+	letter-spacing: 1px;
+	transition: all 1s;
+}
+
+#tf-menu.navbar-default .navbar-nav > li > a:hover, 
+#tf-menu.navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+	background-color: $color_secondary;
+}
+#tf-menu.navbar-default .navbar-nav > li.active > a {
+	background-color: $color_secondary;
+}
+#tf-menu.navbar-default .navbar-nav > li.active > a:hover,
+#tf-menu.navbar-default .navbar-nav > li.active > a:focus{
+	background-color: transparent;
+	border: 2px solid white;
+}
+
+.logo{
+	font-family: 'Playball', cursive;
+}
+
+ul.cat.list-inline li a {
+	border: 1px solid #2F937B;
+	padding: 5px 15px;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #2F937B;
+	transition: all 0.5s;
+}
+
+ul.cat.list-inline li a:hover{
+	background: #2F937B;
+	color: #ffffff;
+}
+
+.space{ padding: 20px}
+.toppadding{ padding-top: 30px}
+.nopadding{ padding:  0;}
+
+/*=========================================================================
+  Responsive
+===========================================================================*/
+@media (min-width: 1200px){
+	.container {
+	width: 1100px;
+	}
+}
