@@ -1,2 +1,35 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% provide(:title, 'Sign up') %>
+<div class="login-wrap">
+  <div class="login-html">
+    <div class="col-md-12 logo">
+    </div>
+    <input id="tab-2" type="radio" name="tab" class="sign-in" checked>
+    <label for="tab-2" class="tab">Sign up</label>
+
+    <div class="row login-form">
+      <div class="sign-up-htm">
+        <%= form_for(:user, url: signup_path) do |f| %>
+          <div class="group">
+            <%= f.text_field :name, placeholder: "NAME",class: 'input form-control' %>
+          </div>         
+          <div class="group">
+            <%= f.email_field :email, placeholder: "EMAIL",class: 'input form-control' %>
+          </div>
+          <div class="group">
+            <%= f.password_field :password, placeholder: "PASSWORD",class: 'input form-control'  %>
+          </div>
+          <div class="group">
+            <%= f.password_field :password_confirmation, placeholder: "PASSWORD CONFIRMATION",class: 'input form-control'%>
+          </div>
+          <div class="group">
+            <%= f.submit "Create my account", class: "button" %>
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <a href="<%= root_path %>">Already Member?</a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

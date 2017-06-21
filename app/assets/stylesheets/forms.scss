@@ -1,0 +1,305 @@
+ /*-----------------------------------------------------------------------------------------------------------------
+
+@package: Mbeoane Truck Rental
+@author: Mbele Lebohang
+@version: 1.0
+
+-------------------------------------------------------------------------------------------------------------------*/
+
+/*========================================================================
+  Imports & Variables
+==========================================================================*/
+/* Imports */
+
+
+/* mixins, variables, etc. */
+$color_main : #13bfec ; // main purple
+$color_secondary : darken($color_main, 10%) ; // dark purple
+$gray-medium-light: #eaeaea;
+
+$font_main : 'Roboto', sans-serif;
+$font_titles : 'Dosis', sans-serif;
+
+/*========================================================================
+  Sign-up/Sign-in Forms
+==========================================================================*/
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+  width:100%;
+  margin:auto;
+  max-width:525px;
+  min-height:680px;
+  position:relative;
+  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:40px 70px 50px 70px;
+  background: white;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+  display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+  text-transform:uppercase;
+}
+.login-html .tab{
+  font-size:22px;
+  margin-right:15px;
+  padding-bottom:5px;
+  margin:0 15px 10px 0;
+  display:inline-block;
+  border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+  color: $color_secondary;
+  border-color:$color_secondary;
+}
+.login-form{
+  min-height:345px;
+  position:relative;
+  -webkit-perspective:1000px;
+          perspective:1000px;
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+}
+.login-form .group{
+  margin-bottom:15px;
+  text-align: center
+}
+.login-form .group .input{
+  color: black;
+}
+.login-form .group .label{
+  width:100%;
+  color:#fff;
+  display:block;
+}
+.login-form .group .input{
+  padding: 0px;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 0;
+  padding:15px 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  background: white;
+  border-bottom: solid 2px $color_secondary;
+  transition: border 0.3s;
+}
+.login-form .group .button{
+	padding:15px 20px;
+}
+.login-form .group .input:focus{
+  border-bottom: solid 2px $color_main;
+  padding: 20px;
+  outline: none;
+}
+.login-form .group input[data-type="password"]{
+  text-security:circle;
+  -webkit-text-security:circle;
+}
+.login-form .group .label{
+  color: $color_secondary;
+  font-size:12px;
+}
+.login-form .group .button{
+  background: $color_secondary;
+  color: white;
+}
+.login-form .group label .icon{
+  width:15px;
+  height:15px;
+  border-radius:2px;
+  position:relative;
+  display:inline-block;
+  background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+  content:'';
+  width:10px;
+  height:2px;
+  background:#fff;
+  position:absolute;
+  -webkit-transition:all .2s ease-in-out 0s;
+  transition:all .2s ease-in-out 0s;
+}
+
+.label{
+  text-align: left;
+}
+
+.hr{
+  height:2px;
+  margin:40px 0 30px 0;
+  background: $color_main;
+}
+.foot-lnk{
+  text-align:center;
+  color: #666;
+}
+/*================================================================================
+  Application forms
+==================================================================================*/
+select, textarea[type="text"], input[type="text"]{
+  dispay: block;
+  margin: 5px;
+  width: 100%;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+textarea[type="text"], select, input[type="text"]:focus{
+  outline: none;
+}
+
+.input-field{
+  margin-bottom: 30px;
+}
+.input-button{
+  float: right;
+}
+.label{
+  color: black;
+  font-family: $font_main;
+}
+form.registration-form fieldset {
+  display: none;
+}
+
+.style-4 input[type="text"].input-error{
+  border-bottom: solid 2px red;
+}
+
+.btn-previous{
+  float: left;
+}
+.btn-next, .btn-submit{
+  float: right;
+}
+select{
+  color: #ada9b5;
+  option{
+    color: black;
+  }
+}
+
+/* The Glow - style-1 */
+.style-1 input[type="text"]{
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus{
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+/* The Thick Border - style-2 */
+.style-2 input[type="text"]{
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+
+.style-2 input[type="text"]:focus,
+.style-2 input[type="text"].focus{
+  border: solid 5px #969696;
+}
+
+/* The Double-Border - style-3 */
+.style-3 input[type="text"]{
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  box-shadow: inset 0 0 0 1px #707070;
+  transition: box-shadow 0.3s ,border 0.3s;
+}
+
+.style-3 input[type="text"]:focus,
+.style-3 input[type="text"].focus{
+  border: solid 5px #969696;
+}
+
+/* The Underline - style-4 */
+.style-4 select,
+.style-4 input[type="text"],
+.style-4 textarea[type="text"]{
+  padding: 0px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: solid 2px $color_secondary;
+  transition: border 0.3s;
+  background: image_url('bg.jpg');
+}
+
+
+.style-4 input[type="text"]:focus,
+.style-4 input[type="text"].focus{
+  border-bottom: solid 2px $color_main;
+  padding: 10px;
+}
+
+/* The Inset - style-5 */
+.style-5 input[type="text"]{
+  padding: 10px;
+  border: solid 1px #fff;
+  border-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.style-5 input[type="text"]:focus,
+.style-5 input[type="text"].focus{
+  border-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+/*================================================================================
+  Form logo
+==================================================================================*/
+
+.login-html{
+  .logo{
+    margin: 0 0 35px 0;
+    img{
+      display: block;
+      margin: 0 auto;
+    }  
+  }
+}
+
+/*================================================================================
+  Form messages
+==================================================================================*/
+#error_explanation{
+  color:red;
+  ul{
+    color: red;
+    margin: 0 0 30px 25%;
+
+  }
+}
+
+.field_with_errors{
+  .form-control{
+    color: red;
+  }
+}
+.alert-success{
+  border: 2px solid #3c763d;
+  margin-top: 10px;
+  border-radius: 0;
+}
