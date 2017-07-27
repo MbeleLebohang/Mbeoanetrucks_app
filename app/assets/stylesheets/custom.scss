@@ -228,6 +228,9 @@ a:focus{
 /*========================================================================
   Navigation bar
 =========================================================================*/
+.navbar-brand {
+  padding: 2.5px 10px;
+}
 #tf-menu {
 	margin-bottom: 0;
 	background: darken($color_secondary, 30%);
